@@ -1,0 +1,19 @@
+{
+  "builds": [
+    {
+      "src": "api/**/*.php",
+      "use": "vercel-php@0.6.1"
+    },
+    {
+      "src": "*.php",
+      "use": "vercel-php@0.6.1"
+    }
+  ],
+  "routes": [
+    { "src": "/(.*\\.php)$", "dest": "/$1" },
+    { "src": "/(.*)", "dest": "/index.php" }
+  ],
+  "env": {
+    "GS_URL": ""
+  }
+}
